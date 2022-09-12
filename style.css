@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #003060;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px #00306050;
+}
+
+h1, h2, h3 {
+    text-transform: capitalize;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: #055C9D;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #003060;
+}
+
+p {
+    color: #0E86D4;
+}
+
+.container {
+    background-color: #68BBE3;
+    width: 90vw;
+    max-width: 450px;
+    border-radius: 4px;
+    padding: 24px 32px;
+    box-shadow: 0 5px 15px #00000028;
+}
+
+.pokemons {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-bottom: 12px;
+}
+
+.pokemons h2 {
+    margin-bottom: 5px;
+}
+
+.btn-azul {
+    display: block;
+    width: 100%;
+    border-color: transparent;
+    color: #fff;
+    background-color: #055C9D;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    padding: 8px 0;
+    font-size: 19px;
+    text-transform: capitalize;
+    margin: 24px auto 0 auto;
+    cursor: pointer;
+    outline: 1px solid #00306030;
+    transition: background-color 0.3 ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-azul:hover {
+    background-color: #05528d;
+    box-shadow: 0 5px 15px #00306010;
+}
