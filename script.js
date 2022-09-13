@@ -30,3 +30,22 @@ let dados = [
       image: "https://robohash.org/5?set=set2",
     },
   ];
+
+  const elementoH1 = document.querySelector('h1');
+
+  for(let items of dados) {
+    const elementoArticle = document.createElement('article');
+    elementoArticle.setAttribute('class', 'pokemons');
+
+    elementoArticle.innerHTML = `
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Frwknyu50jmw11.png&f=1&nofb=1" alt="pokemon">
+      <div>
+          <h2>nome</h2>
+          <p>email</p>
+      </div>
+    `;
+
+    elementoH1.insertAdjacentElement('afterend', elementoArticle);
+
+
+  }
