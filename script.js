@@ -32,7 +32,7 @@ let dados = [];
   ]; */
 
   //Fetch request
-  fetch("https://jsonplaceholder.typicode.com/users", {
+  /* fetch("https://jsonplaceholder.typicode.com/users", {
     method: "GET",
   })
     .then((response) => {
@@ -44,7 +44,7 @@ let dados = [];
 
       //Elementos HTML
 
-      elementoH1.innerHTML = `${dados.length} pokemons`
+      elementoH1.innerHTML = `${dados.length} pokemons (rip pokemons)`
 
       //Criando lista de usuários
 
@@ -62,7 +62,7 @@ let dados = [];
 
         elementoH1.insertAdjacentElement('afterend', elementoArticle);
       }
-    });
+    }); */
 
   //Variáveis e Constantes
 
@@ -79,3 +79,32 @@ let dados = [];
     dados = [];
     elementoH1.innerHTML = `${dados.length} pokemons`
   })
+
+  async function renderizar() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users")
+    const dadosJSON = await response.json()
+    dados = dadosJSON
+
+    //Elementos HTML
+
+    elementoH1.innerHTML = `${dados.length} pokemons (rip pokemons)`
+
+    //Criando lista de usuários
+
+    for(let objeto of dados) {
+      const elementoArticle = document.createElement('article');
+      elementoArticle.setAttribute('class', 'pokemons');
+
+      elementoArticle.innerHTML = `
+        <img src="https://robohash.org/1${objeto.id}?set=set2" alt="${objeto.name}">
+        <div>
+            <h2>${objeto.name}</h2>
+            <p>${objeto.email}</p>
+        </div>
+      `;
+
+      elementoH1.insertAdjacentElement('afterend', elementoArticle);
+    }
+  }
+
+  renderizar();
