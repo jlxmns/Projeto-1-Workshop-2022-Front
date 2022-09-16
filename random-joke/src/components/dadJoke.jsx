@@ -23,7 +23,7 @@ function DadJoke() {
     <div className = "container">
       <h1>Dad Joke</h1>
       <p className="joke">{joke}</p>
-      <button type="button" className="btn" onClick={getJoke} >Get another joke</button>
+      <button type="button" className="btn" onClick={getJoke} >Get Another Joke</button>
     </div>
   );
 }
